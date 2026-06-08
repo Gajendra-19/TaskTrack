@@ -48,7 +48,7 @@ html, body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: var(--bg-light);
+  background-color: #5c83ba;
   padding: 20px;
   gap: 40px;
 }
