@@ -2,11 +2,12 @@
 
 A productivity-focused **task management application** that enables users to create and manage tasks through a clean, user-friendly interface — helping individuals stay organized and on top of their work.
 
-🔗 **Live Demo:** [tasktrack-2vgabxhxd-gajendra-choudhary-s-projects.vercel.app](https://tasktrack-2vgabxhxd-gajendra-choudhary-s-projects.vercel.app)
+🔗 **Live Demo:** [tasktrack-2vgabxhxd-gajendra-choudhary-s-projects.vercel.app]
+(https://tasktrack-2vgabxhxd-gajendra-choudhary-s-projects.vercel.app)
 
 ---
 
-## 🔗 Features
+## ✨ Features
 
 - **User Authentication** — Secure register & login with JWT-based auth
 - **Task CRUD** — Create, read, update, and delete tasks with ease
@@ -20,17 +21,19 @@ A productivity-focused **task management application** that enables users to cre
 
 ---
 
-## 🔗 Tech Stack
+## 🛠️ Tech Stack
 
-| Layer     | Technology                          |
-|-----------|-------------------------------------|
-| Frontend  | React 19, React Router DOM v7       |
-| Build     | Vite                                |
-| HTTP      | Axios                               |
-| Notifications | React Toastify                  |
-| Auth      | JWT (stored in localStorage)        |
-| Backend   | Node.js / Express (separate service)|
-| Deployment| Vercel (frontend)                   |
+| Layer         | Technology                          |
+|---------------|-------------------------------------|
+| Frontend      | React 19, React Router DOM v7       |
+| Build         | Vite                                |
+| HTTP Client   | Axios                               |
+| Notifications | React Toastify                      |
+| Backend       | Node.js, Express 5                  |
+| Database      | MongoDB, Mongoose                   |
+| Auth          | JWT (jsonwebtoken), bcryptjs        |
+| Dev Server    | Nodemon                             |
+| Deployment    | Vercel (frontend)                   |
 
 ---
 
@@ -38,12 +41,28 @@ A productivity-focused **task management application** that enables users to cre
 
 ```
 TaskTrack/
+├── Backend/
+│   ├── config/
+│   │   └── db.js                 # MongoDB connection
+│   ├── controllers/
+│   │   ├── authController.js     # Register & login logic
+│   │   └── taskController.js     # CRUD task logic
+│   ├── middleware/
+│   │   └── authMiddleware.js     # JWT verification
+│   ├── models/
+│   │   ├── User.js               # User schema
+│   │   └── Task.js               # Task schema
+│   ├── routes/
+│   │   ├── authRoutes.js         # /api/auth routes
+│   │   └── taskRoutes.js         # /api/tasks routes
+│   ├── server.js                 # Express app entry point
+│   └── package.json
 └── frontend/
     ├── public/
     │   └── icon.png
     ├── src/
-    │   ├── assets/          # Images, SVGs
-    │   ├── components/      # Reusable UI (Navbar, TaskList, TaskForm)
+    │   ├── assets/               # Images, SVGs
+    │   ├── components/           # Reusable UI (Navbar, TaskList, TaskForm)
     │   ├── context/
     │   │   └── AuthContext.jsx   # Global auth state
     │   ├── pages/
@@ -61,7 +80,7 @@ TaskTrack/
 
 ---
 
-## 🔗 Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 
@@ -81,17 +100,33 @@ npm install
 
 ### Environment Variables
 
-Create a `.env` file in the `frontend/` directory:
+**Frontend** — create a `.env` file in the `frontend/` directory:
 
 ```env
 VITE_API_URL=http://localhost:5000/api
 ```
 
-> Replace the URL with your deployed backend URL when deploying to production.
+**Backend** — create a `.env` file in the `Backend/` directory:
+
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret_key
+```
 
 ### Running Locally
 
+**Backend:**
 ```bash
+cd Backend
+npm install
+npm run dev
+```
+
+**Frontend:**
+```bash
+cd frontend
+npm install
 npm run dev
 ```
 
@@ -100,6 +135,7 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 ### Building for Production
 
 ```bash
+cd frontend
 npm run build
 ```
 
@@ -128,7 +164,7 @@ The frontend communicates with the backend via the following endpoints:
 
 ---
 
-## 🔗 Pages & Routing
+## 🖥️ Pages & Routing
 
 | Route        | Access     | Description                          |
 |--------------|------------|--------------------------------------|
@@ -142,6 +178,5 @@ The frontend communicates with the backend via the following endpoints:
 
 ## 👤 Author
 
-**Gajendra** — [@Gajendra-19](https://github.com/Gajendra-19)
+**Gajendra** — [@Gajendra-19]
 
----
