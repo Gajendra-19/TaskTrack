@@ -7,7 +7,7 @@ A productivity-focused **task management application** that enables users to cre
 
 ---
 
-## ✨ Features
+## 🔗 Features
 
 - **User Authentication** — Secure register & login with JWT-based auth
 - **Task CRUD** — Create, read, update, and delete tasks with ease
@@ -21,7 +21,7 @@ A productivity-focused **task management application** that enables users to cre
 
 ---
 
-## 🛠️ Tech Stack
+## 🔗 Tech Stack
 
 | Layer         | Technology                          |
 |---------------|-------------------------------------|
@@ -80,7 +80,7 @@ TaskTrack/
 
 ---
 
-## 🚀 Getting Started
+## 🔗 Getting Started
 
 ### Prerequisites
 
@@ -141,7 +141,7 @@ npm run build
 
 ---
 
-## 📡 API Endpoints
+## 🔗 API Endpoints
 
 The frontend communicates with the backend via the following endpoints:
 
@@ -164,7 +164,7 @@ The frontend communicates with the backend via the following endpoints:
 
 ---
 
-## 🖥️ Pages & Routing
+## 🔗 Pages & Routing
 
 | Route        | Access     | Description                          |
 |--------------|------------|--------------------------------------|
