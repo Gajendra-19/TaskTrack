@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+#root {
+  width: 100%;
+}
+
+/* Global Styles */
+input, textarea, select {
+  font-family: inherit;
+}
+
+a {
+  color: #1c78e8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+button:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Make layout mobile-friendly */
+}
+
+@media (max-width: 480px) {
+  /* Extra small devices */
+}
+
