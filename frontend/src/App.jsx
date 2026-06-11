@@ -7,6 +7,7 @@ import Login from './pages/login'
 import Register from './pages/register'
 import Dashboard from './pages/dashboard'
 import './App.css'
+import { Analytics } from '@vercel/analytics/react'
 
 // Protected Route Component
 const ProtectedRoute = ({ children }) => {
@@ -67,6 +68,7 @@ function App() {
     <Router>
       <AuthProvider>
         <AppContent />
+
         <ToastContainer
           position="top-right"
           autoClose={3000}
@@ -78,6 +80,8 @@ function App() {
           draggable
           pauseOnHover
         />
+
+        <Analytics />
       </AuthProvider>
     </Router>
   )
